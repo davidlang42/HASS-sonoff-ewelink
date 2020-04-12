@@ -1,0 +1,9 @@
+{
+  "domain": "sonoff",
+  "name": "Sonoff eWeLink",
+  "documentation": "https://github.com/peterbuga/HASS-sonoff-ewelink",
+  "dependencies": [],
+  "after_dependencies": [],
+  "codeowners": ["peterbuga","davidlang42"],
+  "requirements": ['uuid', 'websocket-client==0.54.0']
+}
