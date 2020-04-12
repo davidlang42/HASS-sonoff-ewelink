@@ -1,7 +1,7 @@
 {
   "domain": "sonoff",
   "name": "Sonoff eWeLink",
-  "documentation": "https://github.com/peterbuga/HASS-sonoff-ewelink",
+  "documentation": "https://github.com/davidlang42/HASS-sonoff-ewelink/blob/master/README.md",
   "dependencies": [],
   "after_dependencies": [],
   "codeowners": ["peterbuga","davidlang42"],
