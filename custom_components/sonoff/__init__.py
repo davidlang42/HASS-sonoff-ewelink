@@ -223,7 +223,7 @@ class Sonoff():
                 self.thread.start()
 
     def set_wshost(self):
-        r = requests.post('https://%s-disp.coolkit.cc:8080/dispatch/app' % self._api_region, headers=self._headers)
+        r = requests.post('https://%s-disp.coolkit.cc:8080/dispatch/app' % self._api_region, headers=self._headers, verify=False)
         resp = r.json()
 
         if 'error' in resp and resp['error'] == 0 and 'domain' in resp:
