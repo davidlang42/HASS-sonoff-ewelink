@@ -3,6 +3,11 @@ import logging, time, hmac, hashlib, random, base64, json, socket, requests, re,
 import voluptuous as vol
 import asyncio
 
+# source: https://stackoverflow.com/questions/15445981/how-do-i-disable-the-security-certificate-check-in-python-requests
+from urllib3.exceptions import InsecureRequestWarning
+# Suppress only the single warning from urllib3 needed.
+requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
+
 from datetime import timedelta
 from datetime import datetime
 
@@ -173,7 +178,7 @@ class Sonoff():
         }
 
         r = requests.post('https://{}-api.coolkit.cc:8080/api/user/login'.format(self._api_region),
-            headers=self._headers, json=app_details)
+            headers=self._headers, json=app_details, verify=False)
 
         resp = r.json()
 
