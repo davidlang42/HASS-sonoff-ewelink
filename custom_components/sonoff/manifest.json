@@ -5,5 +5,5 @@
   "dependencies": [],
   "after_dependencies": [],
   "codeowners": ["peterbuga","davidlang42"],
-  "requirements": ["uuid", "websocket-client==0.54.0"]
+  "requirements": ["websocket-client==0.54.0"]
 }
